@@ -1,0 +1,263 @@
+@import url(icheck.css);
+@import url(jquery.custom-scrollbar.css);
+@import url(normalize.css);
+@import url(select2.css);
+/* Attach block */
+/* Sprite */
+/* line 66, for-concat/*.png */
+.for-concat-sprite, .wrap.left-tab-active, .wrap.right-tab-active, .icheckbox_minimal, .icheckbox_minimal.hover, .icheckbox_minimal.checked {
+  background: url('../images/for-concat-sfae3bbdc30.png') no-repeat;
+}
+
+/* Variables */
+/* Common styles */
+/* line 23, scss/styles.scss */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* line 27, scss/styles.scss */
+.hidden {
+  display: none;
+}
+
+/* line 31, scss/styles.scss */
+.f-left {
+  float: left;
+}
+
+/* /Common styles */
+/* Main styles */
+/* line 39, scss/styles.scss */
+.wrap {
+  width: 470px;
+  height: 314px;
+  margin: auto;
+  padding-top: 1px;
+}
+/* line 43, scss/styles.scss */
+.wrap.left-tab-active {
+  background-position: 0 0;
+}
+/* line 46, scss/styles.scss */
+.wrap.right-tab-active {
+  background-position: 0 -315px;
+}
+/* line 50, scss/styles.scss */
+.wrap .tabs {
+  height: 46px;
+  list-style-type: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+/* line 57, scss/styles.scss */
+.wrap .tabs li {
+  width: 227px;
+  height: 46px;
+  float: left;
+  text-indent: 72px;
+  line-height: 43px;
+  cursor: pointer;
+}
+/* line 65, scss/styles.scss */
+.wrap .tabs li.active {
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
+}
+/* line 74, scss/styles.scss */
+.wrap .main-area {
+  width: 460px;
+  height: 184px;
+  margin: 5px auto 0;
+  overflow: hidden;
+}
+/* line 80, scss/styles.scss */
+.wrap .messages-list {
+  width: 210px;
+  margin: 23px 0 0 25px;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 86, scss/styles.scss */
+.wrap .messages-list li {
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 7px;
+  margin: 0 0 12px;
+}
+/* line 91, scss/styles.scss */
+.wrap .messages-list li:after {
+  content: '';
+  width: 160px;
+  height: 2px;
+  background: url("../images/bottom-divider.png") repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+/* line 100, scss/styles.scss */
+.wrap .messages-list li .avatar-container {
+  width: 50px;
+}
+/* line 102, scss/styles.scss */
+.wrap .messages-list li .avatar-container img {
+  max-width: 50px;
+}
+/* line 108, scss/styles.scss */
+.wrap .messages-list li .text-block {
+  width: 135px;
+  padding: 3px 0 0;
+  margin: 0 0 0 16px;
+  position: relative;
+}
+/* line 113, scss/styles.scss */
+.wrap .messages-list li .text-block:after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: url("../images/right-divider.png") repeat-y;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 124, scss/styles.scss */
+.wrap .messages-list li h3 {
+  color: #005068;
+  margin: 0 0 5px;
+  padding: 0;
+  font-weight: normal;
+}
+/* line 131, scss/styles.scss */
+.wrap .messages-list li p {
+  color: #444545;
+  margin: 0;
+  line-height: 12px;
+  padding: 0 0 13px;
+  font-size: 14px;
+}
+/* line 142, scss/styles.scss */
+.wrap .right-list {
+  margin: 23px 0 0 10px;
+  width: 189px;
+}
+/* line 146, scss/styles.scss */
+.wrap .right-list li .text-block {
+  width: 123px;
+}
+/* line 148, scss/styles.scss */
+.wrap .right-list li .text-block:after {
+  display: none;
+}
+/* line 154, scss/styles.scss */
+.wrap .chose-lang {
+  width: 400px;
+  height: 40px;
+  margin: 10px 0 0 28px;
+}
+
+/* /Main styles */
+/* Castom scrollbar */
+/* line 164, scss/styles.scss */
+.scrollable.modern-skin {
+  padding: 0 0 2px;
+}
+/* line 167, scss/styles.scss */
+.scrollable.modern-skin .scroll-bar.vertical {
+  width: 13px;
+  z-index: 100;
+  background: #767676;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #767676), color-stop(100%, #9e9e9e));
+  background-image: -webkit-linear-gradient(top, #767676, #9e9e9e);
+  background-image: -moz-linear-gradient(top, #767676, #9e9e9e);
+  background-image: -o-linear-gradient(top, #767676, #9e9e9e);
+  background-image: linear-gradient(top, #767676, #9e9e9e);
+  margin-right: 7px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0px 0px 1px black;
+  -moz-box-shadow: inset 0px 0px 1px black;
+  box-shadow: inset 0px 0px 1px black;
+}
+/* line 177, scss/styles.scss */
+.scrollable.modern-skin .scroll-bar.vertical .thumb {
+  width: 9px;
+  height: 47px !important;
+  margin: 3px 0 0 2px;
+  background: #4d4f50;
+  border: none;
+}
+
+/* /Castom scrollbar */
+/* Custom select */
+/* line 191, scss/styles.scss */
+.select2-search {
+  display: none;
+}
+
+/* line 195, scss/styles.scss */
+.select2-container {
+  width: 210px;
+}
+/* line 197, scss/styles.scss */
+.select2-container .select2-choice {
+  color: #aaa;
+  height: 32px;
+  line-height: 31px;
+}
+/* line 202, scss/styles.scss */
+.select2-container .select2-choice .select2-arrow {
+  width: 29px;
+  background: #fefefe url("../images/select-arrow.png") no-repeat center;
+}
+
+/* line 208, scss/styles.scss */
+.select2-container .select2-choice, .select2-drop-active, .select2-drop.select2-drop-above {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 213, scss/styles.scss */
+.select2-drop {
+  color: #aaa;
+}
+
+/* line 217, scss/styles.scss */
+.select2-results .select2-highlighted {
+  background: #aaa;
+}
+
+/* line 221, scss/styles.scss */
+.select2-dropdown-open .select2-choice {
+  background: #fff;
+}
+
+/* line 225, scss/styles.scss */
+.select2-drop-active {
+  border: 1px solid #aaa;
+}
+
+/* /Custom select */
+/* Custom checkboxes */
+/* line 233, scss/styles.scss */
+.icheckbox_minimal {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -654px;
+  margin: 0 0 0 55px;
+}
+/* line 237, scss/styles.scss */
+.icheckbox_minimal.hover {
+  background-position: 0 -654px;
+}
+/* line 240, scss/styles.scss */
+.icheckbox_minimal.checked {
+  background-position: 0 -630px;
+}
+
+/* /Custom checkboxes */

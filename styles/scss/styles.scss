@@ -1,0 +1,247 @@
+﻿
+/* Attach block */
+@import 'compass';
+@import 'mixins';
+@import 'icheck.css';
+@import 'jquery.custom-scrollbar.css';
+@import 'normalize.css';
+@import 'select2.css';
+
+/* Sprite */
+@import 'for-concat/*.png';
+
+/* Variables */
+$arial: Arial, sans-serif;
+$imgPath: '../images/';
+$lightGray: #9e9e9e;
+$darkGray: #767676;
+$blue: #005068;
+$black: #000;
+
+
+/* Common styles */
+body {
+    font-family: $arial;
+}
+
+.hidden {
+    display: none;
+}
+
+.f-left {
+    float: left;
+}
+
+/* /Common styles */
+
+
+/* Main styles */
+.wrap {
+    @include size(470px, 314px);
+    margin: auto;
+    padding-top: 1px;
+    &.left-tab-active {
+        @include for-concat-sprite(bg2);
+    }
+    &.right-tab-active {
+        @include for-concat-sprite(bg1);
+    }
+
+    .tabs {
+
+        height: 46px;
+        list-style-type: none;
+        padding: 0;
+        margin: 14px 0 0;
+
+            li {
+                width: 227px;
+                height: 46px;
+                float: left;
+                text-indent: 72px;
+                line-height: 43px;
+                cursor: pointer;
+
+            &.active {
+                font-weight: bold;
+                @include text-shadow(1px 1px 4px rgba($black, 0.9));
+            }
+        }
+
+    }
+
+
+    .main-area {
+        @include size(460px, 184px);
+        margin: 5px auto 0;
+        overflow: hidden;
+    }
+
+        .messages-list {
+            width: 210px;
+            margin: 23px 0 0 25px;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                overflow: hidden;
+                position: relative;
+                padding: 0 0 7px;
+                margin: 0 0 12px;
+                &:after {
+                    content: '';
+                    @include size(160px, 2px);
+                    background: url($imgPath + 'bottom-divider.png') repeat-x;
+                    position: absolute;
+                    bottom: 0;
+                    left: 10px;
+                }
+
+                .avatar-container {
+                    width: 50px;
+                    img {
+                        max-width: 50px;
+                    }
+
+                }
+
+                .text-block {
+                    width: 135px;
+                    padding: 3px 0 0;
+                    margin: 0 0 0 16px;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        @include size(2px, 100%);
+                        background: url($imgPath + 'right-divider.png') repeat-y;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+
+                }
+
+                h3 {
+                    color: $blue;
+                    margin: 0 0 5px;
+                    padding: 0;
+                    font-weight: normal;
+                }
+
+                p {
+                    color: #444545;
+                    margin: 0;
+                    line-height: 12px;
+                    padding: 0 0 13px;
+                    font-size: 14px;
+                }
+
+            }
+        }
+
+        .right-list {
+            margin: 23px 0 0 10px;
+            width: 189px;
+            
+            li .text-block {
+                width: 123px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+    .chose-lang {
+        @include size(400px, 40px);
+        margin: 10px 0 0 28px;
+    }
+}
+
+/* /Main styles */
+
+/* Castom scrollbar */
+
+.scrollable.modern-skin {
+    padding: 0 0 2px;
+
+    .scroll-bar.vertical {
+        width: 13px;
+        z-index: 100;
+        background: #767676;
+        @include background-image(linear-gradient(top, $darkGray, $lightGray));
+        margin-right: 7px;
+        @include border-radius(6px);
+        @include box-shadow(inset 0px 0px 1px $black);
+    }
+
+    .scroll-bar.vertical .thumb {
+        @include size(9px, 47px!important);
+        margin: 3px 0 0 2px;
+        background: #4d4f50;
+        border: none;
+    }
+
+}
+
+/* /Castom scrollbar */
+
+
+/* Custom select */
+
+.select2-search {
+    display: none;
+}
+
+.select2-container {
+    width: 210px;
+    .select2-choice {
+        color: #aaa;
+        height: 32px;
+        line-height: 31px;
+    }
+    .select2-choice .select2-arrow {
+        width: 29px;
+        background: #fefefe url($imgPath + 'select-arrow.png') no-repeat center;
+    }
+}
+
+    .select2-container .select2-choice, .select2-drop-active, .select2-drop.select2-drop-above {
+       @include border-radius(0);
+    }
+
+
+.select2-drop {
+    color: #aaa;
+}
+
+.select2-results .select2-highlighted {
+    background: #aaa;
+}
+
+.select2-dropdown-open .select2-choice {
+    background: #fff;
+}
+
+.select2-drop-active {
+    border: 1px solid #aaa;
+}
+
+/* /Custom select */
+
+/* Custom checkboxes */
+
+.icheckbox_minimal {
+    @include box(24px);
+    @include for-concat-sprite(checkbox);
+    margin: 0 0 0 55px;
+    &.hover {
+        @include for-concat-sprite(checkbox);
+    }
+    &.checked {
+        @include for-concat-sprite(checkbox-checked);
+    }
+
+}
+
+
+/* /Custom checkboxes */
